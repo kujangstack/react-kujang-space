@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-const DashboardScreen: FC = () => {
+const LockScreen: FC = () => {
   return (
     <div
       style={{
@@ -12,9 +12,9 @@ const DashboardScreen: FC = () => {
         fontFamily: ' Roboto,-apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif',
       }}
     >
-      <h1>Dashboard Screen</h1>
+      <h1>Lock Screen</h1>
     </div>
   );
 };
 
-export default DashboardScreen;
+export default LockScreen;

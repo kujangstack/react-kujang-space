@@ -9,7 +9,7 @@ import { join } from 'path';
 import merge from 'webpack-merge';
 import TerserPlugin from 'terser-webpack-plugin';
 import ReactRefreshWebpackPlugin from '@pmmmwh/react-refresh-webpack-plugin';
-import { isProd, rootDir, isDevServer } from './webpack-config/utils';
+import { isProd, rootDir, isDevServer, PORT } from './webpack-config/utils';
 import { htmlRule, fontsRule, imagesRule, javascriptRule, typescriptRule } from './webpack-config/rules';
 import {
   definePlugin,
@@ -67,7 +67,7 @@ const baseConfig = {
         commons: {
           test: /[\\/]node_modules[\\/]/,
           name: 'vendor',
-          chunks: 'initial',
+          chunks: 'all',
         },
       },
     },
@@ -92,6 +92,7 @@ const developmentConfig = {
     headers: { 'Access-Control-Allow-Origin': '*' },
     historyApiFallback: true,
     hot: true,
+    port: PORT,
     proxy: {},
     static: {
       publicPath: '/',

@@ -8,7 +8,8 @@ import { useRoutes } from 'react-router-dom';
 import { routes } from '@/routes';
 
 const AppRoutes: FC = () => {
-  return <Suspense fallback={null}>{useRoutes(routes())}</Suspense>;
+  const isAuthenticated = false; // hardcoded.
+  return <Suspense fallback={null}>{useRoutes(routes(isAuthenticated))}</Suspense>;
 };
 
 export default AppRoutes;

@@ -39,6 +39,7 @@ export const cleanWebpackPlugin = new CleanWebpackPlugin({
  * @see https://webpack.js.org/plugins/html-webpack-plugin/
  */
 export const htmlWebpackPlugin = new HtmlWebpackPlugin({
+  favicon: join(rootDir, './src/assets/icons/favicon.ico'),
   filename: 'index.html',
   inject: true,
   template: join(rootDir, './src/index.html'),

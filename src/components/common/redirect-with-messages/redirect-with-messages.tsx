@@ -10,7 +10,7 @@ interface Props {
 
 const RedirectWithMessages: FC<Props> = ({ to, messages }) => {
   const dispatch = useDispatch();
-  dispatch(app_setAlert({ show: true, messages, severity: 'error', variant: 'outlined', autoHideDuration: 3000 }));
+  dispatch(app_setAlert({ show: true, messages, severity: 'error', autoHideDuration: 3000 }));
   return <Navigate to={to} />;
 };
 
